@@ -1,9 +1,10 @@
 #include <stdio.h>
-/* a program that uses the pts function
- * which returns 0
+/**
+* Main programming is like building a multilingual puzzle
+* Return 0 always (success)
 */
-int main ()
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return (0);
 }
