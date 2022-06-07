@@ -1,11 +1,13 @@
 #include <stdio.h>
 /*
-* main - program that prints "_putchar" from a character array
+*Main : program that printd "_putchar" from a character array
 **
 * Returns : 0 on (success)
 */
 int main(void)
-
+/*
+*Main : program that printd "_putchar" from a character array
+*/
 {
 	char c[] = "_putchar";
 	int i;
