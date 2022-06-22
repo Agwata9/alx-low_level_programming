@@ -1,17 +1,28 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _pow_recursion - raises x to the power of y
- * @x: Number Integer
- * @y: Power
+ * prime2 - Makes possible to evaluate from 1 to n
+ * @a: same number as n
+ * @b: number that iterates from 1 to n
  **
  * Return: On success 1.
  */
-int _pow_recursion(int x, int y)
+int prime2(int a, int b)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
+	if (a == b)
 		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	else if (a % b == 0)
+		return (0);
+	return (prime2(a, b + 1));
+}
+/**
+ * is_prime_number - checks if a number is prime
+ * @n: Number Integer
+ * Return: On success 1.
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+		return (0);
+	return (prime2(n, 2));
 }
