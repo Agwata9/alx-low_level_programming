@@ -1,25 +1,40 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <stdlib>
+#include <stdio.h>
 #include "lists.h"
+
 /**
- *print_list - print all elements in the list _t
- *@h: pointer to the list
- *Return: number of nodes
- **/
-size_t print_list(const list_t *h)
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	size_t count = 0;
+	list_t *head;
+	list_t *new;
+	list_t hello = {"World", 5, NULL};
+	size_t n;
 
-	while (h)
+	head = &hello;
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 	{
-		if (h->str)
-			printf("[%u] %s\n", h->len, h->str);
-		else
-			printf("[0] (nil)\n");
-		count++;
-		h = h->next;
+		printf("Error\n");
+		return (1);
 	}
+	new->str = strdup("Hello");
+	new->len = 5;
+	new->next = head;
+	head = new;
+	n = print_list(head);
+	printf("-> %lu elements\n", n);
 
-	return (count);
+	printf("\n");
+	free(new->str);
+	new->str = NULL;
+	n = print_list(head);
+	printf("-> %lu elements\n", n);
+
+	free(new);
+	return (0);
 }
