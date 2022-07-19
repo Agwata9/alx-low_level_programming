@@ -1,3 +1,4 @@
+
 #include <stdlib.h>
 #include "lists.h"
 
@@ -17,6 +18,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", ptr->value);
 		count++;
+		ptr = ptr->next;
 	}
 	return (count);
 }
