@@ -9,6 +9,9 @@ size_t listint_len(const listint_t *h)
 {
 	listint_t *ptr;
 	int len = 0;
+	
+	if (ptr==NULL)
+		return (0);
 
 	while (ptr != NULL)
 	{
