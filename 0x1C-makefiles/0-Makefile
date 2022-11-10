@@ -1,2 +1,3 @@
+# Compile the main.c and the school.c files to exutable school
 all :
-	gcc main.c school.c -0 school
+	gcc main.c school.c -o school
